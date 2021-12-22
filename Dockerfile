@@ -17,7 +17,7 @@ RUN go get -v -u github.com/kelseyhightower/confd \
   && rm -rf /go/src/github.com/kelseyhightower/confd \
   && pip install gunicorn \
   && mkdir /openvpn-monitor \
-  && wget -O - https://github.com/furlongm/openvpn-monitor/archive/${UPSTREAM_VERSION}.tar.gz | tar -C /openvpn-monitor --strip-components=1 -zxvf - \
+  && wget -O - https://github.com/raoulmahtani/openvpn-monitor/archive/master.tar.gz | tar -C /openvpn-monitor --strip-components=1 -zxvf - \
   && cp /openvpn-monitor/openvpn-monitor.conf.example /openvpn-monitor/openvpn-monitor.conf \
   && pip install /openvpn-monitor \
   && mkdir -p /var/lib/GeoIP/ \
